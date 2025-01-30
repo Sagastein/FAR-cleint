@@ -62,7 +62,7 @@ function NavBar() {
   const color = isScrolled ? "black" : "white";
   return (
     <motion.nav
-      className={`w-screen fixed py-4  ${
+      className={`w-screen fixed py-4  z-50 ${
         isScrolled ? "bg-white" : "bg-transparent"
       } transition-colors duration-300`}
       initial={{ backgroundColor: "transparent" }}
