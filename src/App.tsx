@@ -1,11 +1,27 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
+import LandingPage from "./layout/LandingPage";
+import Contact from "./pages/Contact";
 
 const routers = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <LandingPage />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <div>About Page</div>,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
   },
   {
     path: "*",
