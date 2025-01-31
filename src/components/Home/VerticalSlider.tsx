@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  "https://th.bing.com/th/id/R.3d53a122167671f14955623753d586e8?rik=mHNc3MppvzbHmQ&pid=ImgRaw&r=0",
-  "https://th.bing.com/th/id/OIP.jHvTOSF7924Ah63W7mozxQHaEo?rs=1&pid=ImgDetMain",
-  "https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg",
+  "./event1.jpg",
+  "./fintech1.jpg",
+  "./fintech2.jpg",
   // Add more image URLs as needed
 ];
 
@@ -24,8 +24,8 @@ const VerticalSlider = () => {
   };
 
   return (
-    <div className="relative border border-red-500 mb-12 flex items-center justify-center">
-      <div className="relative border  border-blue-300 w-full h-[500px] overflow-hidden">
+    <div className="relative  mb-12 flex items-center justify-center">
+      <div className="relative w-full h-[500px] overflow-hidden">
         <AnimatePresence initial={false}>
           <motion.img
             key={currentIndex}
