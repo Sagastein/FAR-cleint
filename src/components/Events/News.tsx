@@ -1,4 +1,3 @@
-
 const newsAndEvents = [
   {
     date: "May 2025",
@@ -87,7 +86,23 @@ const newsAndEvents = [
   // Add more news and events as needed
 ];
 
+import { useState } from "react";
+
 const News = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(6); // Number of items per page
+
+  // Calculate total pages
+  const totalPages = Math.ceil(newsAndEvents.length / itemsPerPage);
+
+  // Get current items
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = newsAndEvents.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Handle page change
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
@@ -97,7 +112,7 @@ const News = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {newsAndEvents.map((event, index) => (
+          {currentItems.map((event, index) => (
             <div key={index} className="border-l pl-4 overflow-hidden">
               <p className="text-sm text-secondary-dark font-semibold mb-2">
                 {event.date}
@@ -113,40 +128,57 @@ const News = () => {
                 className="w-full h-48 rounded-lg object-cover"
               />
 
-              <div className=" py-4">
+              <div className="py-4">
                 <a
                   href={event.link}
-                  className="inline-block text-primary hover:text-secondary"
+                  className="inline-block text-primary hover:text-secondary font-medium"
                 >
-                  Read More
+                  Read More →
                 </a>
               </div>
             </div>
           ))}
         </div>
-      </div>
-      {/* pagination */}
-      <div>
-        <div className="flex justify-center items-center mt-4">
-          <button className="p-2 h-8 w-8 text-center rounded-full transition-colors duration-300 ">
+
+        {/* Pagination */}
+        <div className="flex justify-center items-center mt-8 space-x-2">
+          <button
+            onClick={() => paginate(currentPage - 1)}
+            disabled={currentPage === 1}
+            className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 ${
+              currentPage === 1
+                ? "bg-gray-200 cursor-not-allowed"
+                : "hover:bg-primary-light"
+            }`}
+            aria-label="Previous page"
+          >
             &lt;
           </button>
-          <button className="p-2 h-8 w-8 text-center rounded-full transition-colors duration-300 bg-yellow-400">
-            01
-          </button>
-          <button className="p-2 h-8 w-8 text-center  rounded-full transition-colors duration-300  hover:bg-gray-500">
-            02
-          </button>
-          <button className="p-2 h-8 w-8 text-center rounded-full transition-colors duration-300  hover:bg-gray-500">
-            03
-          </button>
-          <button className="p-2 h-8 w-8 text-center rounded-full transition-colors duration-300  hover:bg-gray-500">
-            04
-          </button>
-          <button className="p-2 h-8 w-8 text-center rounded-full transition-colors duration-300  hover:bg-gray-500">
-            05
-          </button>
-          <button className="p-2 h-8 w-8 text-center rounded-full transition-colors duration-300 ">
+
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => paginate(page)}
+              className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 ${
+                currentPage === page
+                  ? "bg-primary text-white"
+                  : "hover:bg-primary-light"
+              }`}
+            >
+              {page}
+            </button>
+          ))}
+
+          <button
+            onClick={() => paginate(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 ${
+              currentPage === totalPages
+                ? "bg-gray-200 cursor-not-allowed"
+                : "hover:bg-primary-light"
+            }`}
+            aria-label="Next page"
+          >
             &gt;
           </button>
         </div>
