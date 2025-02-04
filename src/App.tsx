@@ -4,6 +4,12 @@ import Home from "./pages/Home";
 import LandingPage from "./layout/LandingPage";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Verification from "./pages/Verification";
+import Programs from "./pages/Programs";
+import AboutPage from "./pages/About";
+import Membership from "./pages/Membership";
 
 const routers = createBrowserRouter([
   {
@@ -16,7 +22,15 @@ const routers = createBrowserRouter([
       },
       {
         path: "about",
-        element: <div>About Page</div>,
+        element: <AboutPage />,
+      },
+      {
+        path: "programs",
+        element: <Programs />,
+      },
+      {
+        path: "memberships",
+        element: <Membership />,
       },
       {
         path: "events",
@@ -27,6 +41,18 @@ const routers = createBrowserRouter([
         element: <Contact />,
       },
     ],
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+  },
+  {
+    path: "verification",
+    element: <Verification />,
   },
   {
     path: "*",
