@@ -33,6 +33,30 @@
   padding: 0 20px;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+#program-banner {
+  background: linear-gradient(to top, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0)) 0%
+      100%,
+    url("./fintech2.jpg") no-repeat center center/cover;
+  background-blend-mode: darken;
+  height: 50vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0 20px;
+}
+#about-banner {
+  background: linear-gradient(to top, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0)) 0%
+      100%,
+    url("./fintech2.jpg") no-repeat center center/cover;
+  background-blend-mode: darken;
+  height: 50vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0 20px;
+}
+
 #join {
   background: url("./assets/Parterns.png") no-repeat center center/cover;
   background-position: center center;
