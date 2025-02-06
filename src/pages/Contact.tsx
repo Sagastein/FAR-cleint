@@ -8,7 +8,7 @@ function Contact() {
         </h1>
       </section>
       <article className="container md:grid grid-cols-2 mx-auto py-12">
-        <aside className="space-y-6">
+        <aside className="space-y-6 px-2 md:px-0">
           <h1 className="text-primary text-3xl font-bold">
             Contact information
           </h1>
@@ -22,7 +22,7 @@ function Contact() {
               size={32}
               className="bg-secondary-dark text-white font-bold p-2 text-xl rounded-md"
             />
-            <span className="text-primary">
+            <span className="text-primary text-sm md:text-base">
               fintechprofffesionalsnetwork@gmail.com
             </span>
           </a>
