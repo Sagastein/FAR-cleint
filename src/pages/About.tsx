@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Collabtoration_image from "../assets/team-goal.png";
+import success from "../assets/success.png";
 import players from "../assets/players.svg";
-import { Check } from "lucide-react";
+import { Check, CircleCheck } from "lucide-react";
+import Stats from "../components/About/Stats";
+import OurPartnersAbout from "../components/About/OurPartners";
 
 function About() {
   const [activeTab, setActiveTab] = useState<"mission" | "vision">("mission");
@@ -123,6 +126,39 @@ function About() {
           </div>
         </div>
       </section>
+      <section>
+        <article className="container p-4 md:p-12 grid md:flex gap-4 md:gap-x-12 m-12 mx-auto rounded-md bg-slate-200">
+          <aside>
+            <h1 className="text-4xl w-8/12 text-primary">
+              Our Roadmap to Success
+            </h1>
+            <ul className="flex flex-col justify-center space-y-5 mt-8">
+              {[
+                "Position Rwanda as a FinTech hub in Africa.",
+                "Drive financial inclusion to reach underserved communities.",
+                "Foster technological adoption of AI, blockchain, and open banking.",
+                "Advocate for policy reforms to promote growth.",
+                "Strengthen skills and capacity in the ecosystem.",
+              ].map((value, index) => (
+                <li key={index} className="flex gap-x-2  group">
+                  <CircleCheck
+                    size={24}
+                    className="text-secondary-dark border"
+                  />
+                  <span className=" transition-transform text-sm md:text-nowrap">
+                    {value}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </aside>
+          <aside>
+            <img src={success} className="h-[55vh] w-full object-fill" />
+          </aside>
+        </article>
+      </section>
+      <Stats />
+      <OurPartnersAbout />
     </main>
   );
 }
