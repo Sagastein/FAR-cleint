@@ -69,6 +69,7 @@ function SignUp() {
             <img
               src="https://img.icons8.com/color/32/000000/google-logo.png"
               className="h-6"
+              loading="eager"
             />
             <span>Sign in with Google</span>
           </button>
@@ -78,6 +79,7 @@ function SignUp() {
             <img
               src="https://img.icons8.com/color/32/000000/microsoft.png"
               className="h-6"
+              loading="eager"
             />
             <span>Sign in with Microsoft</span>
           </button>

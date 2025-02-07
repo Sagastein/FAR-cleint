@@ -17,7 +17,7 @@ function WhoWeAre() {
           </h1>
         </div>
         <div className="">
-          <img src={Team_goal} className="h-[300px] object-contain w-full" />
+          <img src={Team_goal} loading="lazy" className="h-[300px] object-contain w-full" />
         </div>
       </section>
       <hr />
@@ -31,7 +31,7 @@ function WhoWeAre() {
 
         <main className="grid grid-cols-4 gap-5 w-11/12 mx-auto mt-10">
           <div className="bg-white p-4 space-y-3 rounded-lg shadow-lg text-start">
-            <img src={Capacity} />
+            <img src={Capacity} loading="lazy" />
             <h3 className="text-lg text-primary font-bold">
               Capacity Building
             </h3>
@@ -40,7 +40,7 @@ function WhoWeAre() {
             </p>
           </div>
           <div className="bg-white p-4 space-y-3 rounded-lg shadow-lg text-start">
-            <img src={Advocacy} />
+            <img src={Advocacy} loading="eager" />
             <h3 className="text-lg text-primary font-bold">Policy Advocacy</h3>
             <p className="text-xs text-gray-800">
               Shaping regulatory frameworks for a thriving ecosystem.
@@ -54,7 +54,7 @@ function WhoWeAre() {
             </p>
           </div>
           <div className="bg-white p-4 space-y-3 rounded-lg shadow-lg text-start">
-            <img src={Resouces} />
+            <img src={Resouces} loading="lazy" />
             <h3 className="text-lg text-primary font-bold">
               Financial Inclusion
             </h3>

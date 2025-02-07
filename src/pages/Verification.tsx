@@ -5,7 +5,7 @@ function Verification() {
     <main>
       <article className="w-5/12 mx-auto border-2 my-12 rounded-lg">
         <header className="bg-primary p-4 flex justify-center items-center rounded-t-lg">
-          <img src={Logo_black} alt="logo" className="h-20" />
+          <img src={Logo_black} alt="logo" loading="lazy" className="h-20" />
         </header>
         <section className="space-y-4 px-12 pb-12 bg-white rounded-b-lg">
           <div className="space-y-2">

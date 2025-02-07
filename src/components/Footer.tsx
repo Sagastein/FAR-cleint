@@ -3,8 +3,8 @@ import { Instagram, Facebook, Linkedin, Phone, Mail } from "lucide-react";
 import qrcode from "../assets/qrcode.png";
 const Footer = () => {
   return (
-    <footer className="bg-primary space-y-4 text-white py-12">
-      <div className="container mx-auto border px-4">
+    <footer className="bg-primary px-2 space-y-4 text-white py-12">
+      <div className="container mx-auto px-4">
         {/* Footer Content */}
 
         <div className="md:flex space-y-4  gap-8">
@@ -72,7 +72,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <img src={qrcode} />
+            <img src={qrcode} loading="eager" />
           </div>
           {/* Join Us Section */}
           <div>

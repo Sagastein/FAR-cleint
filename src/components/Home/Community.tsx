@@ -8,6 +8,7 @@ function Community() {
         <img
           src={communit}
           className="h-[500px] rounded-3xl object-cover  w-full"
+          loading="lazy"
         />
         <div className="flex-1 space-y-6 p-10">
           <h2 className="text-secondary-dark text-sm font-medium">

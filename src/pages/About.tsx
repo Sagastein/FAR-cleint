@@ -77,7 +77,7 @@ function About() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* Stats Card */}
           <div className="bg-black flex flex-col space-y-2 items-center text-white p-6 rounded-md text-center">
-            <img src={players} alt="players" className="w-16 h-16" />
+            <img src={players} alt="players" loading="lazy" className="w-16 h-16" />
             <div className="text-3xl text-secondary font-bold">300+</div>
             <p className="text-lg">FinTech Players Engaged</p>
           </div>
@@ -88,6 +88,7 @@ function About() {
               src={Collabtoration_image}
               alt="Collaboration"
               className="rounded-md w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
 
@@ -96,6 +97,7 @@ function About() {
               src="/about1.jpg"
               className="rounded-md w-full h-full object-cover"
               alt="About"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-2">
               <h2 className="text-white text-center font-bold">
@@ -153,7 +155,7 @@ function About() {
             </ul>
           </aside>
           <aside>
-            <img src={success} className="h-[55vh] w-full object-fill" />
+            <img src={success} loading="lazy" className="h-[55vh] w-full object-fill" />
           </aside>
         </article>
       </section>
