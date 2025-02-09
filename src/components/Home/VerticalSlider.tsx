@@ -52,28 +52,6 @@ const VerticalSlider = () => {
           ></button>
         ))}
       </div>
-      {/* <div className=" bg-primary text-white absolute bottom-0 w-full justify-between p-6">
-        <section className="grid grid-cols-4 justify-between items-center w-11/12 mx-auto">
-          <aside className="flex border-r flex-col space-y-2 items-center">
-            <h1 className="text-3xl text-secondary font-bold">300 +</h1>
-            <p className="text-white text-xs">FinTech Players Engaged</p>
-          </aside>
-          <aside className="flex border-r flex-col space-y-2 items-center">
-            <h1 className="text-3xl text-secondary font-bold">7,500</h1>
-            <p className="text-white text-xs">Jobs Created by 2029.</p>
-          </aside>
-          <aside className="flex border-r flex-col space-y-2 items-center">
-            <h1 className="text-3xl text-secondary font-bold">80%</h1>
-            <p className="text-white text-xs">
-              FinTech Adoption across Rwanda.
-            </p>
-          </aside>
-          <aside className="flex  flex-col space-y-2 items-center">
-            <h1 className="text-3xl text-secondary font-bold">$200</h1>
-            <p className="text-white text-xs"> in Investments projected.</p>
-          </aside>
-        </section>
-      </div> */}
       <div className="absolute bottom-0 w-full">
         <Stats />
       </div>
