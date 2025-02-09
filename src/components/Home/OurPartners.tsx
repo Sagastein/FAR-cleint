@@ -82,9 +82,9 @@ const OurPartners = () => {
       <div className=" bg-primary">
         <section
           id="join"
-          className="w-10/12 mx-auto py-12 space-y-4 flex flex-col justify-center items-center"
+          className="w-11/12 md:w-10/12 mx-auto py-12 space-y-4 flex flex-col justify-center items-center"
         >
-          <h1 className="text-white text-2xl w-8/12 font-bold text-center">
+          <h1 className="text-white text-2xl w-11/12 md:w-8/12 font-bold text-center">
             Join a thriving community of innovators driving Rwanda’s financial
             future.
           </h1>

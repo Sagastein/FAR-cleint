@@ -4,7 +4,7 @@ import VerticalSlider from "./VerticalSlider";
 function Community() {
   return (
     <>
-      <main className="w-11/12 py-12 grid grid-cols-2 mx-auto">
+      <main className="w-11/12 py-12 grid md:grid-cols-2 mx-auto">
         <img
           src={communit}
           className="h-[500px] rounded-3xl object-cover  w-full"
