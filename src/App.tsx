@@ -10,6 +10,7 @@ import Verification from "./pages/Verification";
 import Programs from "./pages/Programs";
 import AboutPage from "./pages/About";
 import Membership from "./pages/Membership";
+import Resources from "./pages/Resources";
 
 const routers = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const routers = createBrowserRouter([
       {
         path: "memberships",
         element: <Membership />,
+      },
+      {
+        path: "resources",
+        element: <Resources />,
       },
       {
         path: "events",
