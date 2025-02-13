@@ -9,12 +9,12 @@ function Resources() {
   return (
     <main className="bg-white flex flex-col justify-center py-12 pt-20">
       <article className="w-11/12 mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Main Featured Card */}
-          <div className="relative rounded-lg overflow-hidden shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+          {/* <!-- Main Featured Card --> */}
+          <div className="relative rounded-lg overflow-hidden shadow-lg md:col-span-3">
             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
             <img
-              src="./event1.jpg"
+              src="./event2.jpg"
               alt="Rwanda FinTech"
               className="w-full h-full object-cover"
             />
@@ -32,9 +32,9 @@ function Resources() {
             </div>
           </div>
 
-          {/* Right Column Cards */}
-          <div className="grid grid-cols-1 gap-4">
-            {/* First Card */}
+          {/* <!-- Right Column Cards --> */}
+          <div className="grid grid-cols-1 gap-4 md:col-span-2">
+            {/* <!-- First Card --> */}
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
               <img
@@ -43,7 +43,7 @@ function Resources() {
                 className="w-full h-48 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 p-2">
-                <h2 className="text-lg font-bold py-2  text-white">
+                <h2 className="text-lg font-bold py-2 text-white">
                   Startup ABC Secures $1M Seed Funding via Hanga Central
                 </h2>
                 <div className="flex items-center justify-between">
@@ -55,16 +55,15 @@ function Resources() {
               </div>
             </div>
 
-            {/* Second Card */}
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
               <img
-                src="./fintech1.jpg"
+                src="./event3.jpg"
                 alt="Startup ABC"
                 className="w-full h-48 object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 p-2">
-                <h2 className="text-lg font-bold py-2  text-white">
+                <h2 className="text-lg font-bold py-2 text-white">
                   Startup ABC Secures $1M Seed Funding via Hanga Central
                 </h2>
                 <div className="flex items-center justify-between">
@@ -82,7 +81,7 @@ function Resources() {
         <h1 className="my-4 text-white text-center text-2xl font-bold">
           Explore Our Latest Resources
         </h1>
-        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:grid-cols-3 gap-4">
           <div className=" space-y-4 p-4 flex flex-col">
             <img src={resource1} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
