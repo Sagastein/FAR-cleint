@@ -11,6 +11,7 @@ import Programs from "./pages/Programs";
 import AboutPage from "./pages/About";
 import Membership from "./pages/Membership";
 import Resources from "./pages/Resources";
+import MembersDirectory from "./pages/Members";
 
 const routers = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const routers = createBrowserRouter([
       {
         path: "memberships",
         element: <Membership />,
+      },
+      {
+        path: "members",
+        element: <MembersDirectory />,
       },
       {
         path: "resources",

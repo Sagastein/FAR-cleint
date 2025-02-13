@@ -1,13 +1,11 @@
 import OurPartnersMembership from "../components/membership/OurPartners";
 import FaqAccordion from "../components/membership/FaqAccordion";
-import {
-  MembershipOptions,
-  MembershipTiers,
-} from "../components/membership/MembershipTiers";
+import { MembershipTiers } from "../components/membership/MembershipTiers";
 import { Testimonials } from "../components/membership/Testimonials";
+import MembersSection from "../components/membership/OurMembers";
 const Hero = () => (
   <div className="bg-primary text-white py-16">
-    <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+    <div className="w-11/12 max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
       <div className="w-full md:w-1/2 space-y-4">
         <h1 className="text-4xl font-bold">
           Be Part of Rwanda's FinTech Revolution
@@ -75,7 +73,8 @@ const Membership = () => (
     <Hero />
     <JourneySteps />
     <MembershipTiers />
-    <MembershipOptions />
+    {/* <MembershipOptions /> */}
+    <MembersSection />
     <Testimonials />
     <OurPartnersMembership />
     <FaqAccordion />
