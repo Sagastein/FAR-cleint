@@ -14,7 +14,7 @@ function Resources() {
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
             <img
-              src="./fintech1.jpg"
+              src="./event1.jpg"
               alt="Rwanda FinTech"
               className="w-full h-full object-cover"
             />
@@ -83,7 +83,7 @@ function Resources() {
           Explore Our Latest Resources
         </h1>
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 gap-4">
-          <div className="border space-y-4 p-4 flex flex-col">
+          <div className=" space-y-4 p-4 flex flex-col">
             <img src={resource1} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
             <p className="text-sm text-white">
@@ -91,7 +91,7 @@ function Resources() {
               map to help better understand the gamechangers in the country.
             </p>
           </div>
-          <div className="border space-y-4 p-4 flex flex-col ">
+          <div className=" space-y-4 p-4 flex flex-col ">
             <img src={card} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Regulatory Map</h4>
             <p className="text-sm text-white">
@@ -99,7 +99,7 @@ function Resources() {
               map to help better understand the gamechangers in the country.
             </p>
           </div>
-          <div className="border space-y-4 p-4 flex flex-col ">
+          <div className=" space-y-4 p-4 flex flex-col ">
             <img src={resource2} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
             <p className="text-sm text-white">
@@ -107,7 +107,7 @@ function Resources() {
               map to help better understand the gamechangers in the country.
             </p>
           </div>{" "}
-          <div className="border space-y-4 p-4 flex flex-col ">
+          <div className=" space-y-4 p-4 flex flex-col ">
             <img src={resource3} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
             <p className="text-sm text-white">
@@ -115,7 +115,7 @@ function Resources() {
               map to help better understand the gamechangers in the country.
             </p>
           </div>{" "}
-          <div className="border space-y-4 p-4 flex flex-col ">
+          <div className=" space-y-4 p-4 flex flex-col ">
             <img src={resource4} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
             <p className="text-sm text-white">
@@ -123,7 +123,7 @@ function Resources() {
               map to help better understand the gamechangers in the country.
             </p>
           </div>{" "}
-          <div className="border space-y-4 p-4 flex flex-col ">
+          <div className=" space-y-4 p-4 flex flex-col ">
             <img src={resource5} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
             <p className="text-sm text-white">
