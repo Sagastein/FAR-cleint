@@ -39,12 +39,12 @@ export const MembershipTiers = () => {
         Choose a Membership That Fits Your Needs
       </h2>
       <div className="overflow-x-auto w-11/12 mx-auto">
-        <table className="w-full border bg-primary border-collapse  rounded-lg overflow-hidden">
+        <table className="w-full border bg-primary border-collapse  rounded-lg overflow-x-auto">
           <thead className="bg-primary text-secondary">
             <tr>
               <th className="p-4 border text-left">Tier</th>
               <th className="p-4 border text-left">Annual Fee (RWF)</th>
-              <th className="p-4 border text-left">Key Benefits</th>
+              <th className="p-4 min-w-40 border text-left">Key Benefits</th>
             </tr>
           </thead>
           <tbody className="bg-primary text-white">
@@ -52,7 +52,12 @@ export const MembershipTiers = () => {
               <tr key={tier.name} className={"bg-primary border"}>
                 <td className="p-4 border font-medium">{tier.name}</td>
                 <td className="p-4 border">{tier.fee}</td>
-                <td className="p-4 border">{tier.benefits}</td>
+                <td className="p-4 border">
+                  {tier.benefits}{" "}
+                  <a href="#" className="text-secondary-dark ">
+                    Read More
+                  </a>
+                </td>
               </tr>
             ))}
           </tbody>

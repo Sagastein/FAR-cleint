@@ -36,8 +36,8 @@ const JourneySteps = () => {
   ];
 
   return (
-    <div className="py-16 grid md:grid-cols-2 gap-x-6 px-4 max-w-7xl mx-auto">
-      <div className="max-w-2xl">
+    <div className="py-16 w-11/12 grid md:grid-cols-2 gap-x-6 px-4 max-w-7xl mx-auto">
+      <div className="max-w-2xl py-12">
         <h2 className="text-3xl font-bold mb-4">
           Your Journey to FinTech Success Starts Here
         </h2>
@@ -51,7 +51,7 @@ const JourneySteps = () => {
           Apply for Membership
         </button>
       </div>
-      <div className="grid md:grid-cols-2 grid-cols-4 gap-6 mt-12">
+      <div className="grid sm:grid-cols-2 gap-6 mt-12">
         {steps.map((step) => (
           <div
             key={step.number}
