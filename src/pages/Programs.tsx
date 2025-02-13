@@ -1,4 +1,6 @@
-import ProgramListings from "../components/programs/ProgramList";
+// import ProgramListings from "../components/programs/ProgramList";
+import OurPartnersPrograms from "../components/programs/OurPartners";
+import ServicesGrid from "../components/programs/ServicesGrid";
 
 export default function Programs() {
   return (
@@ -11,11 +13,9 @@ export default function Programs() {
           Driving Innovation, Collaboration & Growth in FinTech
         </p>
       </header>
-      <h2 className="text-3xl my-6 font-bold mb-12 text-primary text-center">
-        Our Key Initiatives
-      </h2>
-
-      <ProgramListings />
+      <ServicesGrid />
+      {/* <ProgramListings /> */}
+      <OurPartnersPrograms />
     </main>
   );
 }
