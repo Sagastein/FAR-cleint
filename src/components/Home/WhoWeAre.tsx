@@ -1,8 +1,8 @@
 import Team_goal from "../../assets/team-goal.png";
 import Capacity from "../../assets/capacity.svg";
-import Advocacy from "../../assets/advocacy.svg";
-import Hubs from "../../assets/hubs.svg";
-import Resouces from "../../assets/resources.svg";
+import Advocacy from "../../assets/Advocacy.svg";
+import Hubs from "../../assets/Hubs.svg";
+import Resouces from "../../assets/Resources.svg";
 
 function WhoWeAre() {
   return (
