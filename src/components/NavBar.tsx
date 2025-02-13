@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo_white from "../assets/far-logo.png";
 import Logo_black from "../assets/far-logo-back.png";
 import { motion, AnimatePresence } from "framer-motion";
@@ -97,12 +97,12 @@ function NavBar() {
               </li>
             ))}
           </ul>
-          <button
-            type="button"
+          <Link
+            to={"/signin"}
             className="text-primary text-sm bg-secondary py-3 px-6 rounded-3xl hover:bg-primary hover:text-secondary transition-colors duration-300 ease-in"
           >
             Join Us
-          </button>
+          </Link>
         </aside>
 
         {/* Mobile Menu Toggle Button */}
@@ -141,12 +141,12 @@ function NavBar() {
                 </li>
               ))}
               <li>
-                <button
-                  type="button"
+                <Link
+                  to="/signin"
                   className="w-full text-primary text-sm bg-secondary py-3 px-6 rounded-3xl hover:bg-primary hover:text-secondary transition-colors duration-300 ease-in"
                 >
                   Join Us
-                </button>
+                </Link>
               </li>
             </ul>
           </motion.div>

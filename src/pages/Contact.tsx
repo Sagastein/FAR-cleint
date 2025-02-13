@@ -7,7 +7,7 @@ function Contact() {
           Contact
         </h1>
       </section>
-      <article className="container md:grid grid-cols-2 mx-auto py-12">
+      <article className="w-11/12 md:grid grid-cols-2 mx-auto py-12">
         <aside className="space-y-6 px-2 md:px-0">
           <h1 className="text-primary text-3xl font-bold">
             Contact information
