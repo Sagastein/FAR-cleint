@@ -38,25 +38,29 @@ export const MembershipTiers = () => {
       <h2 className="text-3xl text-center font-bold mb-8">
         Choose a Membership That Fits Your Needs
       </h2>
-      <div className="overflow-x-auto w-11/12 mx-auto">
+      <div className="overflow-x-auto w-10/12 mx-auto">
         <table className="w-full border bg-primary border-collapse  rounded-lg overflow-x-auto">
           <thead className="bg-primary text-secondary">
             <tr>
-              <th className="p-4 border text-left">Tier</th>
-              <th className="p-4 border text-left">Annual Fee (RWF)</th>
-              <th className="p-4 min-w-40 border text-left">Key Benefits</th>
+              <th className="p-3 px-6 border text-left">Tier</th>
+              <th className="p-3 px-6 border text-left">Annual Fee (RWF)</th>
+              <th colSpan={2} className="p-4 min-w-40 border text-left">
+                Key Benefits
+              </th>
             </tr>
           </thead>
           <tbody className="bg-primary text-white">
             {tiers.map((tier) => (
               <tr key={tier.name} className={"bg-primary border"}>
-                <td className="p-4 border font-medium">{tier.name}</td>
-                <td className="p-4 border">{tier.fee}</td>
-                <td className="p-4 border">
-                  {tier.benefits}{" "}
-                  <a href="#" className="text-secondary-dark ">
-                    Read More
-                  </a>
+                <td className="p-3 text-sm px-6 border font-bold">
+                  {tier.name}
+                </td>
+                <td className="p-3 text-sm px-6 border">{tier.fee}</td>
+                <td className="p-3 text-xs px-6 border">{tier.benefits} </td>
+                <td>
+                  <button className=" text-secondary text-xs px-6 py-3 rounded-md">
+                    Start Your Membership
+                  </button>
                 </td>
               </tr>
             ))}
@@ -128,7 +132,7 @@ export const MembershipOptions = () => {
   ];
 
   return (
-    <div className="py-16 px-4 max-w-7xl mx-auto">
+    <div className="py-8 px-4 max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-12">
         Explore Our Membership Option
       </h2>
