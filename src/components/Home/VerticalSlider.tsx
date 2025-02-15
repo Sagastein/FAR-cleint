@@ -36,7 +36,7 @@ const VerticalSlider = () => {
             animate={{ y: "0%" }}
             exit={{ y: "-100%" }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute w-full h-full"
+            className="absolute object-cover  w-full h-full"
             loading="lazy"
           />
         </AnimatePresence>
