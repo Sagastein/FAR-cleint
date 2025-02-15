@@ -135,7 +135,7 @@ function About() {
         </div>
       </section>
       <section>
-        <article className="container p-4 md:p-12 grid md:flex gap-4 md:gap-x-12 m-12 mx-auto rounded-md bg-slate-200">
+        <article className="w-11/12  p-4 md:p-12 grid md:flex gap-4 md:gap-x-12 m-12 mx-auto bg-slate-200">
           <aside>
             <h1 className="text-4xl w-8/12 text-primary">
               Our Roadmap to Success
