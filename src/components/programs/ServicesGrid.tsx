@@ -9,7 +9,7 @@ function ServicesGrid() {
       icon: Building2,
     },
     {
-      title: "FinTech Startup Incubation",
+      title: "FinTech Startup Incubation    ",
       description:
         "A startup support program that provides mentorship, funding access, and business development guidance to early stage FinTechs.",
       icon: Rocket,
@@ -42,14 +42,16 @@ function ServicesGrid() {
           return (
             <div
               key={index}
-              className="bg-gray-100 relative rounded-lg p-6 flex flex-col gap-4"
+              className="bg-gray-100 relative h-[200px] rounded-lg p-6 flex flex-col gap-4"
             >
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="font-semibold w-11/12 text-lg mb-2">
+                  <h3 className="font-semibold text-start w-10/12 text-lg mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
+                  <p className="text-gray-600 leading-5 absolute bottom-2 py-4 text-sm">
+                    {service.description}
+                  </p>
                 </div>
                 <div className="bg-white absolute right-0 top-0 p-4 rounded-lg">
                   <div className="bg-gray-900 p-2 rounded-lg">
