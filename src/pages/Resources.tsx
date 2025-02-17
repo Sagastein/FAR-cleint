@@ -81,7 +81,7 @@ function Resources() {
         <h1 className="my-4 text-white text-center text-2xl font-bold">
           Explore Our Latest Resources
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:grid-cols-3 gap-4">
+        <div className="grid w-11/12 mx-auto grid-cols-1 sm:grid-cols-2 gap-y-12 md:grid-cols-3 gap-4">
           <div className=" space-y-4 p-4 flex flex-col">
             <img src={resource1} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
