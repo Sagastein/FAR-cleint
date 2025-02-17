@@ -104,7 +104,7 @@ const News = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <section className="py-12">
+    <section className="py-12 border ">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="flex justify-between items-center mb-8">
