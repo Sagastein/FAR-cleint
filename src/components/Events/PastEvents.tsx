@@ -87,63 +87,65 @@ const PastEvents: React.FC = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto py-12 bg-gray-50">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-gray-900">
-          Explore Past Events & Key Takeaways
-        </h2>
-      </div>
+    <main className="bg-gray-100">
+      <div className="w-11/12 mx-auto py-12 ">
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Explore Past Events & Key Takeaways
+          </h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {getCurrentEvents().map((event) => (
-          <PastEventCard key={event.id} event={event} />
-        ))}
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {getCurrentEvents().map((event) => (
+            <PastEventCard key={event.id} event={event} />
+          ))}
+        </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center items-center mt-8 space-x-2">
-        <button
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-          className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 ${
-            currentPage === 1
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-primary text-white hover:bg-primary/90"
-          }`}
-          aria-label="Previous page"
-        >
-          &lt;
-        </button>
-
-        {[...Array(totalPages)].map((_, index) => (
+        {/* Pagination */}
+        <div className="flex justify-center items-center mt-8 space-x-2">
           <button
-            key={index}
-            onClick={() => handlePageChange(index + 1)}
-            className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 ${
+              currentPage === 1
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-primary text-white hover:bg-primary/90"
+            }`}
+            aria-label="Previous page"
+          >
+            &lt;
+          </button>
+
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => handlePageChange(index + 1)}
+              className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 
               ${
                 currentPage === index + 1
                   ? "bg-primary text-white"
                   : "bg-gray-200 text-gray-700 hover:bg-primary/90 hover:text-white"
               }`}
-          >
-            {String(index + 1).padStart(2, "0")}
-          </button>
-        ))}
+            >
+              {String(index + 1).padStart(2, "0")}
+            </button>
+          ))}
 
-        <button
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 ${
-            currentPage === totalPages
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-primary text-white hover:bg-primary/90"
-          }`}
-          aria-label="Next page"
-        >
-          &gt;
-        </button>
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className={`p-2 h-8 w-8 flex items-center justify-center rounded-full transition-colors duration-300 ${
+              currentPage === totalPages
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-primary text-white hover:bg-primary/90"
+            }`}
+            aria-label="Next page"
+          >
+            &gt;
+          </button>
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 
