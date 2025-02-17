@@ -42,7 +42,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="w-screen sticky top-0 py-4 z-50 bg-white shadow-md">
+    <nav className="max-w-screen-2xl sticky top-0 py-4 z-50 bg-white shadow-md">
       <section className="flex justify-between items-center w-11/12 mx-auto">
         <aside>
           <img
