@@ -4,6 +4,7 @@ import resource2 from "../assets/resource2.svg";
 import resource3 from "../assets/resource3.svg";
 import resource4 from "../assets/resource4.svg";
 import resource5 from "../assets/resource5.svg";
+import News from "../components/Events/News";
 
 function Resources() {
   return (
@@ -132,6 +133,7 @@ function Resources() {
           </div>
         </div>
       </article>
+      <News />
     </main>
   );
 }

@@ -104,8 +104,8 @@ const News = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <section className="py-12 border ">
-      <div className="container mx-auto px-4">
+    <section className="py-12">
+      <div className="w-11/12 mx-auto px-4">
         {/* Section Header */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800">News</h2>
@@ -125,7 +125,7 @@ const News = () => {
               <img
                 src={event.image}
                 alt={event.headline}
-                className="w-full h-48 rounded-lg object-cover"
+                className="w-full h-52 rounded-lg object-cover"
               />
 
               <div className="py-4">

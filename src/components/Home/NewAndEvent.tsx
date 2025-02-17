@@ -25,10 +25,10 @@ const newsAndEvents = [
 const NewsAndEvents = () => {
   return (
     <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="w-11/12 mx-auto px-4">
         <h2 className="font-bold text-secondary-dark">News and Events</h2>
         {/* Section Header */}
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center my-4">
           <h2 className="text-3xl font-bold text-gray-800">
             Latest Updates and Events
           </h2>
