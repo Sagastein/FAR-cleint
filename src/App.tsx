@@ -1,17 +1,20 @@
-import "./App.css";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
-import LandingPage from "./layout/LandingPage";
-import Contact from "./pages/Contact";
-import Events from "./pages/Events";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import Verification from "./pages/Verification";
-import Programs from "./pages/Programs";
-import AboutPage from "./pages/About";
-import Membership from "./pages/Membership";
-import Resources from "./pages/Resources";
-import MembersDirectory from "./pages/Members";
+import { ScaleLoader } from "react-spinners";
+import "./App.css";
+
+const LandingPage = lazy(() => import("./layout/LandingPage"));
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Programs = lazy(() => import("./pages/Programs"));
+const Membership = lazy(() => import("./pages/Membership"));
+const MembersDirectory = lazy(() => import("./pages/Members"));
+const Resources = lazy(() => import("./pages/Resources"));
+const Events = lazy(() => import("./pages/Events"));
+const Contact = lazy(() => import("./pages/Contact"));
+const SignIn = lazy(() => import("./pages/SignIn"));
+const SignUp = lazy(() => import("./pages/SignUp"));
+const Verification = lazy(() => import("./pages/Verification"));
 
 const routers = createBrowserRouter([
   {
@@ -24,7 +27,7 @@ const routers = createBrowserRouter([
       },
       {
         path: "about",
-        element: <AboutPage />,
+        element: <About />,
       },
       {
         path: "programs",
@@ -71,7 +74,17 @@ const routers = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={routers} />;
+  return (
+    <Suspense
+      fallback={
+        <div className="flex h-screen overflow-hidden justify-center items-center">
+          <ScaleLoader color="#ffd400" height={35} radius={3} />
+        </div>
+      }
+    >
+      <RouterProvider router={routers} />
+    </Suspense>
+  );
 }
 
 export default App;
