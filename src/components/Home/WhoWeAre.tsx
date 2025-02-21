@@ -12,7 +12,7 @@ function WhoWeAre() {
           <h2 className="text-sm text-secondary-dark font-medium">
             Who We Are
           </h2>
-          <h1 className="text-4xl text-primary font-bold">
+          <h1 className=" text-2xl sm:text-4xl text-primary font-bold">
             Empowering Rwanda’s FinTech Ecosystem
           </h1>
         </div>
@@ -29,7 +29,7 @@ function WhoWeAre() {
         <h2 className="text-sm text-secondary-dark text-center font-medium">
           What We Do
         </h2>
-        <h1 className="text-4xl text-primary text-center font-bold">
+        <h1 className="text-2xl sm:text-4xl text-primary text-center font-bold">
           Driving Innovation and Impact
         </h1>
 

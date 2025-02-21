@@ -38,8 +38,8 @@ export const MembershipTiers = () => {
       <h2 className="text-3xl text-center font-bold mb-8">
         Choose a Membership That Fits Your Needs
       </h2>
-      <div className="overflow-x-auto w-10/12 mx-auto">
-        <table className="w-full border bg-primary border-collapse  rounded-lg overflow-x-auto">
+      <div className="overflow-x-auto md:w-10/12 mx-auto">
+        <table className="min-w-max w-full border bg-primary border-collapse rounded-lg">
           <thead className="bg-primary text-secondary">
             <tr>
               <th className="p-3 px-6 border text-left">Tier</th>
@@ -58,7 +58,7 @@ export const MembershipTiers = () => {
                 <td className="p-3 text-sm px-6 border">{tier.fee}</td>
                 <td className="p-3 text-xs px-6 border">{tier.benefits} </td>
                 <td>
-                  <button className=" text-secondary text-xs px-6 py-3 rounded-md">
+                  <button className="text-secondary text-xs px-6 py-3 rounded-md">
                     Start Your Membership
                   </button>
                 </td>

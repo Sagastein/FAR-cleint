@@ -29,7 +29,7 @@ const NewsAndEvents = () => {
         <h2 className="font-bold text-secondary-dark">News and Events</h2>
         {/* Section Header */}
         <div className="flex justify-between items-center my-4">
-          <h2 className="text-3xl font-bold text-gray-800">
+          <h2 className="sm:text-3xl font-bold text-gray-800">
             Latest Updates and Events
           </h2>
           <a
