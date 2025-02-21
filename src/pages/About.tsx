@@ -137,7 +137,7 @@ function About() {
       <section>
         <article className="w-11/12  p-4 md:p-12 grid md:flex gap-4 md:gap-x-12 m-12 mx-auto bg-slate-200">
           <aside>
-            <h1 className="text-4xl w-8/12 text-primary">
+            <h1 className=" text-2xl sm:text-4xl w-8/12 text-primary">
               Our Roadmap to Success
             </h1>
             <ul className="flex flex-col justify-center space-y-5 mt-8">

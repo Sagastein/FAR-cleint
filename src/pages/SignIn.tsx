@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 function SignIn() {
   return (
     <main>
-      <article className="w-5/12 mx-auto border-2 my-12 rounded-lg">
+      <article className=" w-11/12 sm:w-5/12 mx-auto border-2 my-12 rounded-lg">
         <header className="bg-primary p-4 flex justify-center items-center rounded-t-lg">
           <img src={Logo_black} alt="logo" className="h-20" />
         </header>
