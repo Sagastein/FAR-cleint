@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ScaleLoader } from "react-spinners";
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 const LandingPage = lazy(() => import("./layout/LandingPage"));
 const Home = lazy(() => import("./pages/Home"));
@@ -75,15 +76,18 @@ const routers = createBrowserRouter([
 
 function App() {
   return (
-    <Suspense
-      fallback={
-        <div className="flex h-screen overflow-hidden justify-center items-center">
-          <ScaleLoader color="#ffd400" height={35} radius={3} />
-        </div>
-      }
-    >
-      <RouterProvider router={routers} />
-    </Suspense>
+    <>
+      <Suspense
+        fallback={
+          <div className="flex h-screen overflow-hidden justify-center items-center">
+            <ScaleLoader color="#ffd400" height={35} radius={3} />
+          </div>
+        }
+      >
+        <RouterProvider router={routers} />
+      </Suspense>
+      <ScrollToTop />
+    </>
   );
 }
 
