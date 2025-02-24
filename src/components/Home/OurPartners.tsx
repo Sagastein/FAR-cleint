@@ -8,9 +8,8 @@ const logos = [
   rra_logo,
   chamber_logo,
   bnr_logo,
-  chamber_logo,
-  bnr_logo,
-  rra_logo, // Add more logos if needed
+
+  // Add more logos if needed
 ];
 
 const OurPartners = () => {
@@ -27,7 +26,7 @@ const OurPartners = () => {
 
   // Calculate the visible logos in the queue
   const visibleLogos = Array.from(
-    { length: 5 },
+    { length: 3 },
     (_, i) => logos[(currentIndex + i) % logos.length]
   );
 
