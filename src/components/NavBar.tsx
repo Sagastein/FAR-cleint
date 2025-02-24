@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo_black from "../assets/far-logo-back.png";
 import { Menu, X } from "lucide-react"; // Import Lucide icons
 
@@ -66,12 +66,14 @@ function NavBar() {
               </li>
             ))}
           </ul>
-          <Link
-            to={"/signin"}
+          <a
+            href="https://docs.google.com/forms/d/1F8tAhQRZrywmaIZ7pssARFIZen3TEYofvf0CunoBX68/edit"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white text-sm bg-primary py-3 px-6 rounded-3xl hover:bg-primary hover:text-secondary transition-colors duration-300 ease-in"
           >
             Join Us
-          </Link>
+          </a>
         </aside>
 
         {/* Mobile Menu Toggle Button */}
@@ -103,12 +105,14 @@ function NavBar() {
               </li>
             ))}
             <li>
-              <Link
-                to="/signin"
-                className="w-full text-white text-sm bg-primary py-3 px-6 rounded-3xl hover:bg-primary hover:text-secondary transition-colors duration-300 ease-in"
+              <a
+                href="https://docs.google.com/forms/d/1F8tAhQRZrywmaIZ7pssARFIZen3TEYofvf0CunoBX68/edit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-sm bg-primary py-3 px-6 rounded-3xl hover:bg-primary hover:text-secondary transition-colors duration-300 ease-in"
               >
                 Join Us
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
