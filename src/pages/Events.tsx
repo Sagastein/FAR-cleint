@@ -11,14 +11,14 @@ const Events: React.FC = () => {
       <PastEvents />
       <footer
         id="footer-sub"
-        className="flex gap-4 bg-[url('./community.jpg')] h-[300px]"
+        className="md:flex gap-4 bg-[url('./community.jpg')] h-[300px]"
       >
-        <aside className="flex flex-1 px-12 justify-center items-center">
-          <h1 className="text-white font-bold text-4xl">
+        <aside className="flex flex-1 p-4 md:px-12 justify-center items-center">
+          <h1 className="text-white font-bold text-2xl md:text-4xl">
             Never Miss a FinTech Event Again!
           </h1>
         </aside>
-        <aside className="flex flex-col flex-1 justify-center ">
+        <aside className="flex flex-col px-2 md:px-0 flex-1 justify-center ">
           <h3 className="text-white text-2xl">News Letter</h3>
           <div className="border w-10/12 border-secondary rounded-lg flex">
             <input

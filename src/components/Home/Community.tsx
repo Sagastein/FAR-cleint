@@ -14,7 +14,7 @@ function Community() {
           <h2 className="text-secondary-dark text-sm font-medium">
             Be Part of the Change
           </h2>
-          <h1 className="text-4xl text-primary font-bold">
+          <h1 className="text-2xl sm:text-4xl text-primary font-bold">
             Join a Thriving FinTech Community
           </h1>
           <p className="text-gray-800 text-sm mt-5 leading-6">

@@ -14,8 +14,8 @@ const FinTechEvents: React.FC<FinTechEventsProps> = ({
   engagedPlayers = 300,
 }) => {
   return (
-    <div className="w-full bg-primary p-8 relative">
-      <div className="w-11/12 grid grid-cols-2 mx-auto">
+    <div className="w-full bg-primary md:p-8 p-4 relative">
+      <div className="w-11/12 grid md:grid-cols-2 gap-y-4 mx-auto">
         <aside className="grid relative grid-cols-2 gap-x-4">
           <div className="">
             <img
