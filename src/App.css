@@ -3,6 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .line-clamp-5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
 #home-banner {
   background: url("./assets/KCC.webp") no-repeat center center/cover;
   background-blend-mode: darken;
