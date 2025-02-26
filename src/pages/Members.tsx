@@ -3,12 +3,15 @@ import { Search, ArrowUpDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Logo_black from "../assets/far-logo.png";
 import { membersprofile } from "../constants/members";
-import Tooltip from "../components/Tooltip";
+import MemberModal from "../components/Modal/MemberModal";
 
 function MembersDirectory() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 16; // Number of items to display per page
+  const [selectedMember, setSelectedMember] = useState<
+    null | (typeof membersprofile)[0]
+  >(null);
 
   // Sample member data
   // const members = Array(50).fill({
@@ -39,6 +42,15 @@ function MembersDirectory() {
   // Handle page change
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+  };
+
+
+  const handleReadMoreClick = (
+    e: React.MouseEvent,
+    member: (typeof membersprofile)[0]
+  ) => {
+    e.stopPropagation();
+    setSelectedMember(member);
   };
 
   // Animation variants for the members grid
@@ -115,7 +127,7 @@ function MembersDirectory() {
         {currentMembers.map((member, index) => (
           <motion.div
             key={index}
-            className="flex flex-col cursor-pointer items-start group hover:shadow-lg rounded-xl transition-shadow duration-300"
+            className="flex flex-col items-start group hover:shadow-lg rounded-xl transition-shadow duration-300"
             variants={memberVariants}
             initial="hidden"
             animate="visible"
@@ -146,40 +158,46 @@ function MembersDirectory() {
                 {member.company_name}
               </h3>
               <div className="relative">
-                <p className="text-gray-600 text-sm line-clamp-5 mb-2">
+                <p className="text-gray-600 text-sm line-clamp-3 mb-2">
                   {member.company_profile}
                 </p>
-                {member.company_profile.length > 250 && (
-                  <div className="relative">
-                    <Tooltip content={member.company_profile}>
-                      <button
-                        className="text-sm font-medium text-primary-600 hover:text-primary-700 
-                                       focus:outline-none flex items-center gap-1"
-                      >
-                        Read more
-                        <svg
-                          className="w-4 h-4"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M9 5L16 12L9 19"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </button>
-                    </Tooltip>
-                  </div>
+                {member.company_profile && (
+                  <button
+                    onClick={(e) => handleReadMoreClick(e, member)}
+                    className="text-sm font-medium text-primary-600 hover:text-primary-700 
+                             focus:outline-none flex items-center gap-1"
+                  >
+                    Read more
+                    <svg
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 5L16 12L9 19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
                 )}
               </div>
             </div>
           </motion.div>
         ))}
       </motion.div>
+
+      {/* Modal */}
+      {selectedMember && (
+        <MemberModal
+          isOpen={!!selectedMember}
+          onClose={() => setSelectedMember(null)}
+          member={selectedMember}
+        />
+      )}
 
       {/* Pagination */}
       <div className="flex justify-center gap-2">

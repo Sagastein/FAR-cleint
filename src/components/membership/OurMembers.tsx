@@ -1,11 +1,24 @@
 import { Link } from "react-router-dom";
 import Logo_black from "../../assets/far-logo.png";
 import { membersprofile } from "../../constants/members";
-import Tooltip from "../Tooltip";
 import { motion } from "motion/react";
+import { useState } from "react";
+import MemberModal from "../Modal/MemberModal";
 
 function MembersSection() {
+  const [selectedMember, setSelectedMember] = useState<
+    null | (typeof membersprofile)[0]
+  >(null);
   const members = membersprofile.slice(0, 4); // Get the first 4 members
+
+  const handleReadMoreClick = (
+    e: React.MouseEvent,
+    member: (typeof membersprofile)[0]
+  ) => {
+    e.stopPropagation(); // Prevent card click event
+    setSelectedMember(member);
+  };
+
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
@@ -27,9 +40,6 @@ function MembersSection() {
               <motion.div
                 key={index}
                 className="flex flex-col items-start group hover:shadow-lg rounded-xl transition-shadow duration-300"
-                initial="hidden"
-                animate="visible"
-                transition={{ duration: 0.5 }}
               >
                 {/* Card with logo */}
                 <div className="relative w-full bg-primary  rounded-t-xl p-4">
@@ -59,37 +69,43 @@ function MembersSection() {
                     <p className="text-gray-600 text-sm line-clamp-5 mb-2">
                       {member.company_profile}
                     </p>
-                    {member.company_profile.length > 250 && (
-                      <div className="relative">
-                        <Tooltip content={member.company_profile}>
-                          <button
-                            className="text-sm font-medium text-primary-600 hover:text-primary-700 
-                                       focus:outline-none flex items-center gap-1"
-                          >
-                            Read more
-                            <svg
-                              className="w-4 h-4"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M9 5L16 12L9 19"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                          </button>
-                        </Tooltip>
-                      </div>
+                    {member.company_profile && (
+                      <button
+                        onClick={(e) => handleReadMoreClick(e, member)}
+                        className="text-sm font-medium text-primary-600 hover:text-primary-700 
+                                   focus:outline-none flex items-center gap-1"
+                      >
+                        Read more
+                        <svg
+                          className="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9 5L16 12L9 19"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </button>
                     )}
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Modal */}
+          {selectedMember && (
+            <MemberModal
+              isOpen={!!selectedMember}
+              onClose={() => setSelectedMember(null)}
+              member={selectedMember}
+            />
+          )}
 
           {/* View All Button */}
           <div className="text-center">
