@@ -83,54 +83,93 @@ function Resources() {
           Explore Our Latest Resources
         </h1>
         <div className="grid w-11/12 mx-auto grid-cols-1 sm:grid-cols-2 gap-y-12 md:grid-cols-3 gap-4">
-          <div className=" space-y-4 p-4 flex flex-col">
+          <div className="space-y-4 p-4 flex flex-col">
             <img src={resource1} className="h-16 w-16" />
             <h4 className="text-secondary font-medium">Ecosystem Map</h4>
             <p className="text-sm text-white">
-              Australia’s most comprehensive and interactive fintech ecosystem
-              map to help better understand the gamechangers in the country.
+              An interactive directory detailing Rwanda’s fintech landscape,
+              showcasing startups, established companies, financial
+              institutions, and support organizations. This map serves as a
+              comprehensive guide to the players driving innovation in Rwanda’s
+              financial sector.
             </p>
           </div>
-          <div className=" space-y-4 p-4 flex flex-col ">
+          <div className="space-y-4 p-4 flex flex-col">
             <img src={card} className="h-16 w-16" />
-            <h4 className="text-secondary font-medium">Regulatory Map</h4>
+            <h4 className="text-secondary font-medium">Regulatory Framework</h4>
             <p className="text-sm text-white">
-              Australia’s most comprehensive and interactive fintech ecosystem
-              map to help better understand the gamechangers in the country.
+              A section dedicated to outlining the regulatory environment for
+              fintech in Rwanda, including licensing requirements, compliance
+              guidelines, and links to pertinent regulatory bodies. This
+              resource assists fintech companies in understanding and navigating
+              the legal landscape effectively.
             </p>
           </div>
-          <div className=" space-y-4 p-4 flex flex-col ">
+          <div className="space-y-4 p-4 flex flex-col">
             <img src={resource2} className="h-16 w-16" />
-            <h4 className="text-secondary font-medium">Ecosystem Map</h4>
+            <h4 className="text-secondary font-medium">
+              Investment Opportunities
+            </h4>
             <p className="text-sm text-white">
-              Australia’s most comprehensive and interactive fintech ecosystem
-              map to help better understand the gamechangers in the country.
-            </p>
-          </div>{" "}
-          <div className=" space-y-4 p-4 flex flex-col ">
-            <img src={resource3} className="h-16 w-16" />
-            <h4 className="text-secondary font-medium">Ecosystem Map</h4>
-            <p className="text-sm text-white">
-              Australia’s most comprehensive and interactive fintech ecosystem
-              map to help better understand the gamechangers in the country.
-            </p>
-          </div>{" "}
-          <div className=" space-y-4 p-4 flex flex-col ">
-            <img src={resource4} className="h-16 w-16" />
-            <h4 className="text-secondary font-medium">Ecosystem Map</h4>
-            <p className="text-sm text-white">
-              Australia’s most comprehensive and interactive fintech ecosystem
-              map to help better understand the gamechangers in the country.
-            </p>
-          </div>{" "}
-          <div className=" space-y-4 p-4 flex flex-col ">
-            <img src={resource5} className="h-16 w-16" />
-            <h4 className="text-secondary font-medium">Ecosystem Map</h4>
-            <p className="text-sm text-white">
-              Australia’s most comprehensive and interactive fintech ecosystem
-              map to help better understand the gamechangers in the country.
+              A curated list of venture capital firms, angel investors, and
+              funding programs interested in supporting Rwandan fintech
+              ventures. This directory connects startups with potential
+              investors to foster growth and innovation.
             </p>
           </div>
+          <div className="space-y-4 p-4 flex flex-col">
+            <img src={resource3} className="h-16 w-16" />
+            <h4 className="text-secondary font-medium">
+              Capacity Building and Training
+            </h4>
+            <p className="text-sm text-white">
+              Information on available courses, workshops, and certification
+              programs focused on fintech and digital finance. This section
+              promotes skill development and talent cultivation within the
+              industry.
+            </p>
+          </div>
+          <div className="space-y-4 p-4 flex flex-col">
+            <img src={resource4} className="h-16 w-16" />
+            <h4 className="text-secondary font-medium">Career Opportunities</h4>
+            <p className="text-sm text-white">
+              A job board featuring current openings in the fintech sector,
+              enabling professionals to find roles that match their expertise
+              and interests, and helping companies attract qualified talent.
+            </p>
+          </div>
+          <div className="space-y-4 p-4 flex flex-col">
+            <img src={resource5} className="h-16 w-16" />
+            <h4 className="text-secondary font-medium">
+              Service Providers Directory
+            </h4>
+            <p className="text-sm text-white">
+              A listing of businesses offering essential services to fintech
+              companies, such as legal counsel, marketing, technology solutions,
+              and consulting. This directory supports fintechs in finding
+              reliable partners and service providers.
+            </p>
+          </div>
+          {/* <div className="space-y-4 p-4 flex flex-col">
+            <img src={resource6} className="h-16 w-16" />
+            <h4 className="text-secondary font-medium">News and Events</h4>
+            <p className="text-sm text-white">
+              Regular updates on industry news, upcoming events, webinars, and
+              conferences relevant to the fintech community in Rwanda. This
+              section keeps members informed and engaged with the latest
+              developments and opportunities.
+            </p>
+          </div>
+          <div className="space-y-4 p-4 flex flex-col">
+            <img src={resource7} className="h-16 w-16" />
+            <h4 className="text-secondary font-medium">Innovation Sandbox</h4>
+            <p className="text-sm text-white">
+              Details about the FinTech Heritage Sandbox initiative by the
+              National Bank of Rwanda, providing a controlled environment for
+              fintech companies to test and refine their innovations before
+              scaling them to the broader market.
+            </p>
+          </div> */}
         </div>
       </article>
       <News />
