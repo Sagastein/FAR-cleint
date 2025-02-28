@@ -140,14 +140,12 @@ function Resources() {
           </div>
           <div className="space-y-4 p-4 flex flex-col">
             <img src={resource5} className="h-16 w-16" />
-            <h4 className="text-secondary font-medium">
-              Service Providers Directory
-            </h4>
+            <h4 className="text-secondary font-medium">Innovation Sandbox</h4>
             <p className="text-sm text-white">
-              A listing of businesses offering essential services to fintech
-              companies, such as legal counsel, marketing, technology solutions,
-              and consulting. This directory supports fintechs in finding
-              reliable partners and service providers.
+              Details about the FinTech Heritage Sandbox initiative by the
+              National Bank of Rwanda, providing a controlled environment for
+              fintech companies to test and refine their innovations before
+              scaling them to the broader market.
             </p>
           </div>
           {/* <div className="space-y-4 p-4 flex flex-col">

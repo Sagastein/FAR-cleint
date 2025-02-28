@@ -44,7 +44,6 @@ function MembersDirectory() {
     setCurrentPage(page);
   };
 
-
   const handleReadMoreClick = (
     e: React.MouseEvent,
     member: (typeof membersprofile)[0]
@@ -157,6 +156,9 @@ function MembersDirectory() {
               <h3 className="font-semibold text-lg mb-2">
                 {member.company_name}
               </h3>
+              <span className=" text-secondary-dark text-xs">
+                {member.segment}
+              </span>
               <div className="relative">
                 <p className="text-gray-600 text-sm line-clamp-3 mb-2">
                   {member.company_profile}

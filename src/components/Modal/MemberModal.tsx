@@ -43,7 +43,7 @@ const MemberModal = ({ isOpen, onClose, member }: MemberModalProps) => {
                   <img
                     src={member.logo}
                     alt={member.company_name}
-                    className="w-24 h-24 rounded-full object-cover"
+                    className="w-24 h-24 rounded-full bg-secondary ring ring-primary object-cover"
                   />
                   <div>
                     <h2 className="text-2xl font-bold">
