@@ -2,9 +2,9 @@ import chairman from "../../assets/chairman.png";
 function TeamSection() {
   const teamMembers = [
     {
-      title: "Chairman",
-      role: "Chairman",
-      image: chairman,
+      title: "MR. Alex Niyonsaba",
+      role: "Chairman of the Board",
+      image: "./alex_ceo.jpg",
     },
     {
       title: "FinTech Coordinator",
