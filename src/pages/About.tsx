@@ -26,7 +26,7 @@ function About() {
         <p className="text-white w-full md:w-6/12 mx-auto text-2xl md:text-3xl font-bold text-center">
           Transforming Rwanda's FinTech Landscape
         </p>
-        <button className="p-2 px-4 my-4 rounded-xl bg-secondary text-primary hover:bg-opacity-90 transition-all">
+        <button className="p-2 px-4 my-4 rounded-xl bg-secondary text-primary hover:bg-primary hover:text-secondary transition-all">
           Join Us Today
         </button>
       </header>
@@ -51,8 +51,8 @@ function About() {
               onClick={() => setActiveTab("mission")}
               className={`flex-1 py-4 px-4 md:px-12 font-semibold rounded-md transition-all duration-300 ${
                 activeTab === "mission"
-                  ? "bg-black text-white border-b-2 border-secondary"
-                  : "border-b-2 border-black text-black hover:bg-gray-100"
+                  ? "bg-primary text-white border-b-2 border-secondary"
+                  : "border-b-2 border-primary text-primary hover:bg-gray-100"
               }`}
             >
               Our Mission
@@ -61,8 +61,8 @@ function About() {
               onClick={() => setActiveTab("vision")}
               className={`flex-1 py-4 px-4 md:px-12 font-semibold rounded-md transition-all duration-300 ${
                 activeTab === "vision"
-                  ? "bg-black text-white border-b-2 border-secondary"
-                  : "border-b-2 border-black text-black hover:bg-gray-100"
+                  ? "bg-primary text-white border-b-2 border-secondary"
+                  : "border-b-2 border-primary text-primary hover:bg-gray-100"
               }`}
             >
               Our Vision
@@ -84,7 +84,7 @@ function About() {
               loading="lazy"
               className="w-16 h-16"
             />
-            <div className="text-3xl text-secondary font-bold">300+</div>
+            <div className="text-3xl text-secondary font-bold">60+</div>
             <p className="text-lg">FinTech Players Engaged</p>
           </div>
 

@@ -11,7 +11,7 @@ interface FinTechEventsProps {
 const FinTechEvents: React.FC<FinTechEventsProps> = ({
   title = "Engage, Learn & Network at Rwanda's Leading FinTech Events",
   description = "From conferences and workshops to networking meetups, stay updated with the latest events shaping the future of financial technology in Rwanda.",
-  engagedPlayers = 300,
+  engagedPlayers = 60,
 }) => {
   return (
     <div className="w-full bg-primary md:p-8 p-4 relative">
@@ -20,7 +20,7 @@ const FinTechEvents: React.FC<FinTechEventsProps> = ({
           <div className="">
             <img
               src="./eventog.jpg"
-              className="h-[400px] w-full rounded-lg object-cover"
+              className="h-[400px] w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
               alt="Event"
             />
           </div>
@@ -28,7 +28,7 @@ const FinTechEvents: React.FC<FinTechEventsProps> = ({
             <img src={patterts} alt="partners" className="object-cover" />
             <img
               src="./event3.jpg"
-              className="flex-1 w-full rounded-lg object-cover"
+              className="flex-1 w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
               alt="Event"
             />
           </div>
@@ -44,7 +44,7 @@ const FinTechEvents: React.FC<FinTechEventsProps> = ({
           <h1 className="text-3xl font-bold text-white mb-4">{title}</h1>
           <p className="text-white">{description}</p>
 
-          <button className="bg-secondary text-sm text-primary py-2 px-4 rounded-3xl mt-4">
+          <button className="bg-secondary hover:bg-primary hover:text-secondary transition-colors duration-300 text-sm text-primary py-2 px-4 rounded-3xl mt-4">
             View Upcoming Events
           </button>
         </aside>

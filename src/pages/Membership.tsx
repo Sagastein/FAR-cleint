@@ -14,7 +14,7 @@ const Hero = () => (
           Join a thriving network of innovators, regulators, and investors
           shaping the future of financial technology in Rwanda.
         </p>
-        <button className="bg-secondary text-primary px-6 py-3 rounded-md font-semibold">
+        <button className="bg-secondary hover:bg-primary hover:text-secondary text-primary px-6 py-3 rounded-md hover:border border-secondary font-semibold transition-all duration-300">
           Become a Member Today
         </button>
       </div>
@@ -45,7 +45,7 @@ const JourneySteps = () => {
           insights, and strategic collaborations that will shape the future of
           finance.
         </p>
-        <button className="bg-primary text-white px-6 py-2 rounded-xl">
+        <button className="bg-primary hover:bg-transparent hover:text-primary hover:border text-white px-6 py-4 rounded-xl">
           Apply for Membership
         </button>
       </div>

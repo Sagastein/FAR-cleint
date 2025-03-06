@@ -1,7 +1,7 @@
 function Stats() {
   const stats = [
     {
-      value: "300 +",
+      value: "60 +",
       label: "FinTech Players Engaged",
     },
     {
